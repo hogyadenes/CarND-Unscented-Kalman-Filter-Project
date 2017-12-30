@@ -66,7 +66,15 @@ public:
 
   ///* Sigma point spreading parameter
   double lambda_;
+  
+  ///* Previous measurement timestamp
+  double previous_timestamp_;
 
+  ///* the current NIS for radar
+  double NIS_radar_;
+
+  ///* the current NIS for laser
+  double NIS_laser_;
 
   /**
    * Constructor
@@ -91,6 +99,18 @@ public:
    */
   void Prediction(double delta_t);
 
+  /**
+   * PredictSigmaPoints Predicts sigma points
+   * @param delta_t Time between k and k+1 in s
+   */
+  void PredictSigmaPoints(double delta_t);
+  
+  /**
+   * PredictMeanAndCovariance Predicts the state, and the state covariance
+   * matrix
+   */
+  void PredictMeanAndCovariance(void);
+ 
   /**
    * Updates the state and the state covariance matrix using a laser measurement
    * @param meas_package The measurement at k+1

@@ -46,6 +46,8 @@ The NIS-test also confirmed these parameters - the following NIS values are calc
 ## Fusing both sensor measurements
 ![Fused](sensor_fusion.jpg)
 
+So radar is better than laser but it is best to use both measurements.
+
 # Basic Build Instructions
 
 1. Clone this repo.

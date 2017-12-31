@@ -6,7 +6,7 @@ In this project I utilize an Unscented Kalman Filter to estimate the state of a 
 # Tuning the parameters
 Before implementing NIS I tuned the two process noise parameters by hand. I found that by setting the standard deviation for the longitudinal acceleration to 2 m/s^2 and for the yaw acceleration to 0.4 rad/s^2 the filter can pass the RMSE requirements.
 
-The NIS-test also confirmed these parameters - the following NIS values are calculated after each update step (laser and radar). 
+The NIS-test also confirmed these parameters - the following NIS values are calculated after each update step (laser and radar). They are below 7.83 most of the time which seems just about right.
  7.96866
  2.16449
  0.435831
